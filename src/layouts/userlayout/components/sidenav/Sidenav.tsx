@@ -1,8 +1,22 @@
-// import { Link } from 'react-router-dom';
 import './Sidenav.scss';
-// import { ReactComponent as Logo } from '../../../../assets/images/logo.svg';
-// import { ReactComponent as Notification } from '../../../../assets/images/notification.svg';
-// import { ReactComponent as Arrow } from '../../../../assets/images/arrow-down.svg';
+import { navlinks } from '../../../../lib/data';
+import SidenavLink from './SidenavLink';
+
 export default function SideNav() {
-	return <nav className='dashboard__sidenav'>SideNav</nav>;
+	return (
+		<nav className='dashboard__sidenav'>
+			{Object.keys(navlinks).map((section) => (
+				<div key={section}>
+					<p>{section}</p>
+					<ul>
+						{navlinks[section].map((link) => (
+							<li key={link.label}>
+								<SidenavLink link={link} />
+							</li>
+						))}
+					</ul>
+				</div>
+			))}
+		</nav>
+	);
 }

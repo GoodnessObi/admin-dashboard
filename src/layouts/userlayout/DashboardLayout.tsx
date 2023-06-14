@@ -7,7 +7,7 @@ export function DashboardLayout() {
 	return (
 		<div className='dashboard'>
 			<Navbar />
-			<div>
+			<div className='dashboard__main'>
 				<SideNav />
 				<div className='dashboard__body'>
 					<Outlet />
