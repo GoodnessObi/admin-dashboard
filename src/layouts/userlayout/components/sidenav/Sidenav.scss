@@ -1,0 +1,6 @@
+@use '../../../../styles/variables' as var;
+@import '../../../../styles/breakpoints';
+.sidenav {
+	box-shadow: var.$shadow-2;
+	width: 283px;
+}

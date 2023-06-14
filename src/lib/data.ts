@@ -6,42 +6,42 @@ const navlinks: navlinksType = {
 	customers: [
 		{
 			label: 'Users',
-			icon: 'Calendar',
+			icon: 'Users',
 			link: '/users',
 		},
 		{
 			label: 'Guarantors',
-			icon: 'Calendar',
+			icon: 'Guarantors',
 			link: '#',
 		},
 		{
 			label: 'Loans',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Decision Models',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Savings',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Loan Requests',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'White List',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'karma',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 	],
@@ -49,17 +49,17 @@ const navlinks: navlinksType = {
 	businesses: [
 		{
 			label: 'Organization',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Loan Products',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Savings Products',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
@@ -79,17 +79,17 @@ const navlinks: navlinksType = {
 		},
 		{
 			label: 'Service Account',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Settlements',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Reports',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 	],
@@ -97,22 +97,22 @@ const navlinks: navlinksType = {
 	settings: [
 		{
 			label: 'Preferences',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Fees and Pricing',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Audit Logs',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 		{
 			label: 'Systems Messages',
-			icon: 'Calendar',
+			icon: '',
 			link: '#',
 		},
 	],

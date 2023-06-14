@@ -118,6 +118,10 @@
 			@include md-breakpoint {
 				display: none;
 			}
+
+			img {
+				color: var.$color-primary;
+			}
 		}
 	}
 }

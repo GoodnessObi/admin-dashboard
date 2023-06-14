@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './Navbar.scss';
-import { ReactComponent as Logo } from '../../../../assets/images/logo.svg';
-import { ReactComponent as Notification } from '../../../../assets/images/bell.svg';
-import { ReactComponent as Arrow } from '../../../../assets/images/arrow-down.svg';
-import { ReactComponent as Hamburger } from '../../../../assets/images/icon-hamburger.svg';
-import { ReactComponent as Close } from '../../../../assets/images/icon-close.svg';
-import { ReactComponent as Search } from '../../../../assets/images/search.svg';
+import Icons from '../../../../assets/images';
 export default function Navbar() {
 	const [navIsOpen, setIsOpen] = useState<boolean>(false);
 
@@ -17,7 +12,7 @@ export default function Navbar() {
 	return (
 		<nav className='navbar'>
 			<Link to='/' className='navbar__logo'>
-				<Logo />
+				<img src={Icons['Logo']} alt='SVG logo image' />
 			</Link>
 			<div className='navbar__items'>
 				<div className='navbar__search'>
@@ -28,7 +23,7 @@ export default function Navbar() {
 							placeholder='Search for anything'
 						/>
 						<span className='icon'>
-							<Search />
+							<img src={Icons['Search']} alt='SVG logo image' />
 						</span>
 					</div>
 				</div>
@@ -38,12 +33,12 @@ export default function Navbar() {
 						Docs
 					</Link>
 					<span role='button' className='notification'>
-						<Notification />
+						<img src={Icons['Notification']} alt='SVG logo image' />
 					</span>
 					<span className='current-user'>
 						<img src='avatar.png' alt='user avatar' />
 						<span className='username'>Adedeji</span>
-						<Arrow />
+						<img src={Icons['ArrowDown']} alt='SVG logo image' />
 					</span>
 				</div>
 
@@ -52,7 +47,11 @@ export default function Navbar() {
 					role='button'
 					onClick={toggleNav}
 				>
-					{navIsOpen ? <Close fill='#213f7d' /> : <Hamburger fill='#213f7d' />}
+					{navIsOpen ? (
+						<img src={Icons['Close']} alt='' />
+					) : (
+						<img src={Icons['Hamburger']} alt='' />
+					)}
 				</div>
 			</div>
 		</nav>
