@@ -1,11 +1,18 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import './DashboardLayout.scss';
+import SideNav from './components/sidenav/Sidenav';
+import Navbar from './components/topnav/Navbar';
 
 export function DashboardLayout() {
 	return (
-		<>
-			<nav>Side and TopBar</nav>
-
-			<Outlet />
-		</>
+		<div className='dashboard'>
+			<Navbar />
+			<div>
+				<SideNav />
+				<div className='dashboard__body'>
+					<Outlet />
+				</div>
+			</div>
+		</div>
 	);
 }
