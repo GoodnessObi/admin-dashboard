@@ -6,36 +6,42 @@ import Briefcase from '../../../../assets/images/briefcase.svg';
 import Arrow from '../../../../assets/images/arrow-down-alt.svg';
 import Logout from '../../../../assets/images/logout.svg';
 
-export default function SideNav() {
+export default function SideNav({ navIsOpen }: { navIsOpen: boolean }) {
 	return (
-		<nav className='sidenav'>
-			<p>
-				<img src={Briefcase} alt='' />
-				Switch Organization
-				<img src={Arrow} alt='' />
-			</p>
-			<p>
-				<img src={Home} alt='' />
-				Dashboard
-			</p>
+		<nav className={`sidenav ${navIsOpen ? 'open' : ''}`}>
+			<div className='sidenav__top'>
+				<span role='button' className='sidenav__item'>
+					<img src={Briefcase} alt='' />
+					Switch Organization
+					<img src={Arrow} alt='' className='icon-right' />
+				</span>
+
+				<span className='sidenav__item sidenav__item--dashboard'>
+					<img src={Home} alt='' />
+					Dashboard
+				</span>
+			</div>
+
 			{Object.keys(navlinks).map((section) => (
-				<div key={section}>
-					<p>{section}</p>
-					<ul>
+				<div key={section} className='sidenav__navSection'>
+					<p className='sidenav__heading'>{section}</p>
+					<ul className='sidenav__linklist'>
 						{navlinks[section].map((link) => (
-							<li key={link.label}>
+							<li key={link.label} className='sidenav__linkitem'>
 								<SidenavLink link={link} />
 							</li>
 						))}
 					</ul>
 				</div>
 			))}
+
 			<hr />
-			<p>
+
+			<span role='button' className='sidenav__item'>
 				{' '}
 				<img src={Logout} alt='' /> Logout
-			</p>
-			<p>v1.2.0</p>
+			</span>
+			<span className='sidenav__item sidenav__item--version'>v1.2.0</span>
 		</nav>
 	);
 }

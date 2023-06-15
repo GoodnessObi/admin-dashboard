@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import './Navbar.scss';
 import Icons from '../../../../assets/images';
-export default function Navbar() {
-	const [navIsOpen, setIsOpen] = useState<boolean>(false);
-
-	const toggleNav = () => {
-		setIsOpen(!navIsOpen);
-	};
-
+type NavbarProps = {
+	toggleNav: () => void;
+	navIsOpen: boolean;
+};
+export default function Navbar({ toggleNav, navIsOpen }: NavbarProps) {
 	return (
 		<nav className='navbar'>
 			<Link to='/' className='navbar__logo'>
