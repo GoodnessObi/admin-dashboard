@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Status, User } from '../../types';
 
-export default function useUsers() {
-	const [users, setUsers] = useState([]);
-	const [status, setStatus] = useState('unloaded');
+export default function useUsers(): [users: User[], status: Status] {
+	const [users, setUsers] = useState<User[]>([]);
+	const [status, setStatus] = useState<Status>('unloaded');
 
 	useEffect(() => {
 		const users = localStorage.getItem('users');
@@ -14,7 +15,6 @@ export default function useUsers() {
 		}
 
 		async function fetchUsers() {
-			setUsers([]);
 			setStatus('loading');
 			const res = await fetch(
 				`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users`
@@ -24,6 +24,7 @@ export default function useUsers() {
 			setUsers(json);
 			setStatus('loaded');
 		}
+		//eslint-disable-next-line
 	}, []);
 
 	return [users, status];
