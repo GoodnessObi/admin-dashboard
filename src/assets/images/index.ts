@@ -1,0 +1,63 @@
+import Briefcase from './briefcase.svg';
+import Users from './users.svg';
+import ArrowDown from './arrow-down.svg';
+import ArrowDownAlt from './arrow-down-alt.svg';
+import Notification from './bell.svg';
+import Search from './search.svg';
+import Logout from './logout.svg';
+import Logo from './logo.svg';
+import Guarantors from './guarantors.svg';
+import Home from './home.svg';
+import Close from './icon-close.svg';
+import Hamburger from './icon-hamburger.svg';
+import Loans from './moneybag.svg';
+import Decision from './handshake-regular.svg';
+import Savings from './piggy-bank.svg';
+import Loan from './loan.svg';
+import Whitelist from './user-check.svg';
+import Karma from './user-times.svg';
+import Bank from './bank.svg';
+import Coins from './coins-solid.svg';
+import Transactions from './transactions.svg';
+import Services from './services.svg';
+import UserCog from './user-cog.svg';
+import Scroll from './scroll.svg';
+import Reports from './chart-bar.svg';
+import Sliders from './sliders1.svg';
+import Pricing from './badge-percent.svg';
+import Logs from './clipboard-list.svg';
+import System from './tire.svg';
+
+const Icons: { [key: string]: string } = {
+	Users,
+	Briefcase,
+	ArrowDown,
+	ArrowDownAlt,
+	Notification,
+	Search,
+	Logout,
+	Logo,
+	Guarantors,
+	Home,
+	Close,
+	Hamburger,
+	Loan,
+	Loans,
+	Decision,
+	Savings,
+	Whitelist,
+	Karma,
+	Bank,
+	Coins,
+	Transactions,
+	Services,
+	UserCog,
+	Scroll,
+	Reports,
+	Sliders,
+	Pricing,
+	Logs,
+	System,
+};
+
+export default Icons;
