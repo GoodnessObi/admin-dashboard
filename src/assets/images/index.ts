@@ -1,3 +1,4 @@
+import Avatar from './avatar.png';
 import Briefcase from './briefcase.svg';
 import Users from './users.svg';
 import ArrowDown from './arrow-down.svg';
@@ -31,6 +32,7 @@ import System from './tire.svg';
 import Signin from './sign-in.svg';
 
 const Icons: { [key: string]: string } = {
+	Avatar,
 	Users,
 	Briefcase,
 	ArrowDown,

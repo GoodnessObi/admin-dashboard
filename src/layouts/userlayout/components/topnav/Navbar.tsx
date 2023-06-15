@@ -33,7 +33,7 @@ export default function Navbar({ toggleNav, navIsOpen }: NavbarProps) {
 						<img src={Icons['Notification']} alt='SVG logo image' />
 					</span>
 					<span className='current-user'>
-						<img src='avatar.png' alt='user avatar' />
+						<img src={Icons['Avatar']} alt='user avatar' />
 						<span className='username'>Adedeji</span>
 						<img src={Icons['ArrowDown']} alt='SVG logo image' />
 					</span>
