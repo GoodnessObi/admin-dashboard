@@ -2,7 +2,6 @@
 @import '../../../../styles/breakpoints';
 .sidenav {
 	box-shadow: var.$shadow-2;
-	width: 283px;
 	padding-top: 30px;
 	transform: translateX(-283px);
 	background-color: #fff;
@@ -11,15 +10,17 @@
 	transition-property: all;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
+	position: absolute;
 
 	@include md-breakpoint {
 		transform: translateX(0);
+		width: 283px;
 	}
 
 	&.open {
 		transform: translateX(0);
-		position: absolute;
 		z-index: 1000;
+		width: 283px;
 	}
 
 	&__top {
