@@ -1,0 +1,23 @@
+.page {
+	&__header {
+		// background-color: #fff;
+		width: 100%;
+	}
+
+	.user {
+		&__page {
+			width: 100%;
+			display: grid;
+			grid-template-rows: auto;
+			grid-row-gap: 20px;
+		}
+		&__tabHeader,
+		&__tabBody {
+			background-color: #fff;
+			padding: 30px;
+			border: 1px solid rgba(33, 63, 125, 0.06);
+			box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+			border-radius: 4px;
+		}
+	}
+}

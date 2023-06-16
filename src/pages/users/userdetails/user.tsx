@@ -1,5 +1,6 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useUser from '../../../common/hooks/useUser';
+import './user.scss';
 
 function User() {
 	const { id } = useParams() as { id: string };
@@ -9,6 +10,9 @@ function User() {
 
 	return (
 		<div className='page'>
+			<div className='back-button'>
+				<Link to='/'>Back to Users</Link>
+			</div>
 			<div className='page__header'>
 				<h2>User Details</h2>
 				<div className='page__header-actions'>
