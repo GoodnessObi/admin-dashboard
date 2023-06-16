@@ -7,8 +7,8 @@ import Signin from './pages/auth/signin/signin';
 function App() {
 	return (
 		<Routes>
+			<Route path='/' element={<Navigate to='/signin' replace />} />
 			<Route path='/signin' element={<Signin />} />
-			<Route path='/' element={<Navigate to='/users' replace />} />
 			<Route path='/users' element={<DashboardLayout />}>
 				<Route index element={<Users />} />
 				<Route path=':id' element={<User />} />

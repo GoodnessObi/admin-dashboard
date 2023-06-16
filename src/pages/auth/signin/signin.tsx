@@ -52,17 +52,15 @@ function Signin() {
 							forgot password
 						</Link>
 
-						{/* <div> */}
 						<button
 							className='form__button'
 							onClick={(e) => {
 								e.preventDefault();
-								navigate('/');
+								navigate('/users');
 							}}
 						>
 							LOG IN
 						</button>
-						{/* </div> */}
 					</form>
 				</div>
 			</div>
