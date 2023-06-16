@@ -6,6 +6,7 @@ import Notification from './bell.svg';
 import Search from './search.svg';
 import Logout from './logout.svg';
 import Logo from './logo.svg';
+import Logo2 from './logo-big.svg';
 import Guarantors from './guarantors.svg';
 import Home from './home.svg';
 import Close from './icon-close.svg';
@@ -27,6 +28,7 @@ import Sliders from './sliders1.svg';
 import Pricing from './badge-percent.svg';
 import Logs from './clipboard-list.svg';
 import System from './tire.svg';
+import Signin from './sign-in.svg';
 
 const Icons: { [key: string]: string } = {
 	Users,
@@ -58,6 +60,8 @@ const Icons: { [key: string]: string } = {
 	Pricing,
 	Logs,
 	System,
+	Signin,
+	Logo2,
 };
 
 export default Icons;

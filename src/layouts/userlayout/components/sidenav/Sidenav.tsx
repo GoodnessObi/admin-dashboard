@@ -5,8 +5,11 @@ import Home from '../../../../assets/images/home.svg';
 import Briefcase from '../../../../assets/images/briefcase.svg';
 import Arrow from '../../../../assets/images/arrow-down-alt.svg';
 import Logout from '../../../../assets/images/logout.svg';
+import { useNavigate } from 'react-router-dom';
 
 export default function SideNav({ navIsOpen }: { navIsOpen: boolean }) {
+	const navigate = useNavigate();
+
 	return (
 		<nav className={`sidenav ${navIsOpen ? 'open' : ''}`}>
 			<div className='sidenav__container'>
@@ -38,8 +41,14 @@ export default function SideNav({ navIsOpen }: { navIsOpen: boolean }) {
 
 				<hr />
 
-				<span role='button' className='sidenav__item'>
-					{' '}
+				<span
+					role='button'
+					className='sidenav__item'
+					onClick={(e) => {
+						e.preventDefault();
+						navigate('/signin');
+					}}
+				>
 					<img src={Logout} alt='' /> Logout
 				</span>
 				<span className='sidenav__item sidenav__item--version'>v1.2.0</span>

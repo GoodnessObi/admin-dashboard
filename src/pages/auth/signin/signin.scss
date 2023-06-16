@@ -1,0 +1,164 @@
+@use '../../../styles/variables' as var;
+@import '../../../styles/breakpoints';
+
+.login {
+	display: grid;
+	min-height: 100vh;
+	position: relative;
+
+	@include sm-breakpoint {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.logo-img {
+		position: relative;
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: center;
+
+		@include sm-breakpoint {
+			position: absolute;
+			top: 106px;
+			left: 97px;
+		}
+
+		img {
+			width: 174px;
+			height: 36px;
+		}
+	}
+
+	&__imgGroup {
+		display: none;
+
+		@include sm-breakpoint {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__formGroup {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include sm-breakpoint {
+			width: 100%;
+			box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+		}
+
+		&-container {
+			width: 100%;
+			padding: 20px;
+			max-width: 576px;
+
+			@include md-breakpoint {
+				width: 70%;
+				max-width: 70%;
+				margin-top: -100px;
+			}
+		}
+
+		.form {
+			&__group {
+				width: 100%;
+				margin-bottom: 24px;
+
+				&.password-group {
+					position: relative;
+
+					.show-password {
+						position: absolute;
+						right: 10px;
+						top: 15px;
+						font-weight: 600;
+						font-size: 12px;
+						line-height: 16px;
+						text-align: center;
+						letter-spacing: 0.1em;
+						text-transform: uppercase;
+						color: #39cdcc;
+						cursor: pointer;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+			&__input {
+				background: #ffffff;
+				border: 2px solid rgba(84, 95, 125, 0.15);
+				border-radius: 5px;
+				width: 100%;
+				min-height: 50px;
+				padding: 0 16px;
+
+				&::placeholder {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 19px;
+					color: rgb(84, 95, 125, 0.6);
+					text-transform: capitalize;
+				}
+			}
+
+			&__button {
+				background: #39cdcc;
+				border-radius: 8px;
+				color: #fff;
+				width: 100%;
+				border: none;
+				border-radius: 8px;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 19px;
+				text-align: center;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				min-height: 48px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 30px;
+			}
+		}
+
+		.forgot-password {
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 16px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #39cdcc;
+		}
+	}
+
+	&__heading {
+		margin-bottom: 60px;
+
+		h1 {
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 55px;
+			letter-spacing: -0.04em;
+			color: #213f7d;
+			margin-bottom: 10px;
+
+			@include sm-breakpoint {
+				font-size: 40px;
+			}
+		}
+		p {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 27px;
+
+			@include sm-breakpoint {
+				font-size: 20px;
+			}
+		}
+	}
+}
