@@ -6,8 +6,6 @@ import './users.scss';
 function Users() {
 	const [users] = useUsers();
 
-	console.log(users, 'iiiii');
-
 	return (
 		<div className='users'>
 			<div className='page__header'>

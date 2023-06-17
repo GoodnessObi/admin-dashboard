@@ -37,8 +37,12 @@ import User from './user.svg';
 import ActiveUser from './user-active.svg';
 import LoanUser from './user-loan.svg';
 import SavingsUser from './user-savings.svg';
+import Filter from './filter.svg';
+import More from './more.svg';
 
 const Icons: { [key: string]: string } = {
+	Filter,
+	More,
 	User,
 	ActiveUser,
 	LoanUser,
