@@ -30,8 +30,14 @@ import Pricing from './badge-percent.svg';
 import Logs from './clipboard-list.svg';
 import System from './tire.svg';
 import Signin from './sign-in.svg';
+import BtnBack from './back-btn.svg';
+import Star from './star.svg';
+import StarOutline from './star-outline.svg';
 
 const Icons: { [key: string]: string } = {
+	Star,
+	StarOutline,
+	BtnBack,
 	Avatar,
 	Users,
 	Briefcase,

@@ -1,7 +1,72 @@
+@use '../../../styles/variables' as var;
+@import '../../../styles/breakpoints';
+
 .page {
+	.back-button {
+		span {
+			display: none;
+
+			@include sm-breakpoint {
+				display: inline-block;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				color: var.$color-primary-alt;
+				margin-left: 14px;
+			}
+		}
+		img {
+			display: inline-block;
+		}
+	}
 	&__header {
-		// background-color: #fff;
 		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 26px;
+		margin-bottom: 40px;
+
+		h2 {
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 28px;
+		}
+
+		button {
+			display: none;
+			border-radius: 8px;
+			padding: 12px;
+			background-color: transparent;
+			min-width: 170px;
+
+			@include xs-breakpoint {
+				display: inline-block;
+			}
+
+			&.activate {
+				border: 1px solid #39cdcc;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 16px;
+				text-align: center;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #39cdcc;
+				margin-left: 20px;
+			}
+
+			&.blacklist {
+				border: 1px solid #e4033b;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 16px;
+				text-align: center;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+
+				color: #e4033b;
+			}
+		}
 	}
 
 	.user {
@@ -19,5 +84,185 @@
 			box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 			border-radius: 4px;
 		}
+
+		&__tabHeader {
+			&-details {
+				display: flex;
+				position: relative;
+				flex-direction: column;
+
+				@include sm-breakpoint {
+					flex-direction: row;
+				}
+
+				.user {
+					&-avatar {
+						width: 100px;
+						height: 100px;
+						border-radius: 50%;
+						object-fit: cover;
+						margin-right: 20px;
+					}
+
+					&-img-name {
+						display: flex;
+						align-items: center;
+
+						.p-medium {
+							margin-top: 8px;
+						}
+					}
+
+					&-tier {
+						position: absolute;
+						right: 10px;
+
+						@include sm-breakpoint {
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							justify-content: center;
+							padding: 0 30px;
+							border-left: 1px solid rgba(84, 95, 125, 0.2);
+							border-right: 1px solid rgba(84, 95, 125, 0.2);
+							margin: 0 30px;
+						}
+
+						p {
+							display: none;
+
+							@include sm-breakpoint {
+								display: inline-flex;
+								margin-bottom: 10px;
+							}
+						}
+
+						span {
+							display: flex;
+						}
+					}
+
+					&-bank {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-self: flex-end;
+						margin-top: 20px;
+
+						@include sm-breakpoint {
+							align-self: unset;
+							margin-top: 0;
+						}
+
+						.p-light {
+							margin-top: 12px;
+						}
+					}
+				}
+			}
+		}
+
+		&__tabBody {
+			h5 {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 19px;
+				margin: 0;
+				// margin-bottom: 30px;
+			}
+
+			p {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 19px;
+				// word-wrap: break-word
+				word-break: break-word;
+			}
+
+			.p-heading {
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 14px;
+				text-transform: uppercase;
+				margin-bottom: 8px;
+			}
+		}
+
+		&__bodySection {
+			border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+			padding-bottom: 30px;
+			padding-top: 30px;
+
+			&:first-of-type {
+				padding-top: 0;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			&.personal-information,
+			&.guarantors,
+			&.socials {
+				.details {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					column-gap: 30px;
+
+					@include sm-breakpoint {
+						grid-template-columns: repeat(3, 1fr);
+					}
+
+					@include md-breakpoint {
+						grid-template-columns: repeat(5, 1fr);
+					}
+				}
+			}
+
+			&.education .details {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-auto-flow: row;
+				column-gap: 30px;
+
+				@include sm-breakpoint {
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				@include md-breakpoint {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+
+			.details div {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	.p-lead {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+	}
+
+	.p-normal {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.p-medium {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: var.$color-primary-alt;
+	}
+
+	.p-light {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14px;
 	}
 }
