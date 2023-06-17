@@ -1,20 +1,21 @@
+@use '../../styles/variables' as var;
 @import '../../styles/breakpoints';
 .dashboard {
-	// border: 1px solid red;
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
 
 	&__body {
 		background-color: #fbfbfb;
-		width: 100vw;
+		width: 100%;
+		margin-top: var.$navbar-height-mobile;
 		padding: 60px;
-		border: 2px solid green;
-		min-height: calc(100vh - 100px);
+		// border: 0.5px solid green;
+		min-height: calc(100vh - var.$navbar-height-mobile);
 
 		@include md-breakpoint {
-			width: calc(100vw - 282px);
-			margin-left: 283px;
+			width: calc(100% - var.$sidenav-width);
+			margin-top: var.$navbar-height-web;
+			margin-left: var.$sidenav-width;
+			min-height: calc(100vh - var.$navbar-height-web);
 		}
 	}
 }
