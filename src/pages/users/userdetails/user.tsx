@@ -7,10 +7,8 @@ function User() {
 	const { id } = useParams() as { id: string };
 	const [user] = useUser(id);
 
-	console.log(user);
-
 	return (
-		<div className='page'>
+		<div className='user'>
 			<div className='back-button'>
 				<Link to='/users'>
 					<img src={Icons['BtnBack']} alt='' />
