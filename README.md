@@ -14,7 +14,7 @@ This is the frontend of an admin management dashboard with 3 pages - the login p
  * **react** as our javscript framwork
  * **react-dom**
  * **react-router-dom**
- * **sass** and **Flask**
+ * **sass**
  * **vite-plugin-svgr**
 
 ### Dev Dependencies
