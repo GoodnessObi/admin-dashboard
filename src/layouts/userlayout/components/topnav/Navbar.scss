@@ -1,19 +1,29 @@
 // @use 'variables';
 @use '../../../../styles/variables' as var;
 @import '../../../../styles/breakpoints';
+
 .navbar {
+	position: fixed;
 	box-shadow: var.$shadow-1;
 	padding-left: 30px;
 	padding-right: 30px;
 	padding: 20px 30px;
-	max-height: 100px;
+	min-height: var.$navbar-height-mobile;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	top: 0;
+	background-color: #fff;
+	z-index: 150;
+
+	@include md-breakpoint {
+		min-height: var.$navbar-height-web;
+	}
 
 	&__logo {
 		@include md-breakpoint {
-			min-width: 283px;
+			min-width: var.$sidenav-width;
 		}
 	}
 
@@ -35,7 +45,6 @@
 
 	&__search {
 		display: none;
-
 		@include sm-breakpoint {
 			display: block;
 			width: 60%;
@@ -61,7 +70,7 @@
 			}
 
 			.icon {
-				background-color: #39cdcc;
+				background-color: var.$color-secondary;
 				display: flex;
 				align-items: center;
 				padding: 0 13px;
@@ -122,17 +131,17 @@
 			img {
 				color: var.$color-primary;
 			}
-		}
 
-		&:hover {
-			animation: spin 1s linear infinite;
+			&:focus {
+				animation: spin 1s linear infinite;
 
-			@keyframes spin {
-				from {
-					transform: rotate(0deg);
-				}
-				to {
-					transform: rotate(360deg);
+				@keyframes spin {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
 				}
 			}
 		}

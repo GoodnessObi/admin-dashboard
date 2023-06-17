@@ -14,11 +14,9 @@ export function DashboardLayout() {
 	return (
 		<div className='dashboard'>
 			<Navbar toggleNav={toggleNav} navIsOpen={navIsOpen} />
-			<div className='dashboard__main'>
-				<SideNav navIsOpen={navIsOpen} />
-				<div className='dashboard__body'>
-					<Outlet />
-				</div>
+			<SideNav navIsOpen={navIsOpen} />
+			<div className='dashboard__body'>
+				<Outlet />
 			</div>
 		</div>
 	);
