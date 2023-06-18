@@ -1,4 +1,5 @@
 // import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Icons from '../../../../assets/images';
 import { User } from '../../../../types';
 import './UsersTable.scss';
@@ -67,7 +68,9 @@ function UsersTable({ users }: { users: User[] }) {
 						<tr key={user.id}>
 							<td data-name='organization'>Lendsqr</td>
 							<td data-name='usename' className='username'>
-								{user.profile?.firstName} {user.profile?.lastName}
+								<Link to={`/users/${user.id}`}>
+									{user.profile?.firstName} {user.profile?.lastName}
+								</Link>
 								<span className='status-span mobile'>Active</span>
 							</td>
 							<td data-name='email'>{user.email}</td>

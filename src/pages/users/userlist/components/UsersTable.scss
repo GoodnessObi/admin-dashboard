@@ -120,6 +120,14 @@
 			margin-bottom: 10px;
 			word-break: break-all;
 
+			a {
+				text-decoration: none;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16px;
+				color: var.$color-primary-alt;
+			}
+
 			@include md-breakpoint {
 				display: table-cell;
 				border-bottom: 1px solid rgba(33, 63, 125, 0.1);
