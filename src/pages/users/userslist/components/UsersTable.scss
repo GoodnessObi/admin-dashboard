@@ -2,6 +2,7 @@
 @import '../../../../styles/breakpoints';
 
 .users__tabBody {
+	position: relative;
 	@include md-breakpoint {
 		background: #ffffff;
 		border: 1px solid rgba(33, 63, 125, 0.06);
@@ -30,6 +31,10 @@
 		@include md-breakpoint {
 			display: none;
 		}
+	}
+
+	.open-filter {
+		cursor: pointer;
 	}
 
 	table {
@@ -192,88 +197,28 @@
 		}
 	}
 
-	// tbody td:first-child {
-	// 	border-left: 4px solid transparent;
-	// 	transition: all ease 0.3s;
-	// }
+	.filterForm {
+		position: absolute;
+		background: white;
+		border: 1px solid rgba(84, 95, 125, 0.14);
+		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+		border-radius: 4px;
+		z-index: 70;
+		min-width: 270px;
+		top: 50px;
+		right: 20px;
 
-	// tbody tr:last-child td {
-	// 	border-bottom: 0;
-	// }
+		@media only screen and (max-width: 330px) {
+			min-width: unset;
+			width: 100%;
+			left: 0;
+			right: 0;
+		}
 
-	// tbody tr:hover {
-	// 	background-color: #f7f9fc;
-	// }
-
-	// tbody tr:hover td:first-child {
-	// 	border-left-color: #0f6fde;
-	// }
-
-	// td.status {
-	// 	text-align: center;
-	// }
-
-	// td.status span {
-	// 	font-size: 12px;
-	// 	border-radius: 3px;
-	// 	padding: 4px 8px;
-	// }
-
-	// td.status span.approved {
-	// 	color: #ffffff;
-	// 	background-color: #00c455;
-	// }
-
-	// td.status span.decline {
-	// 	color: #ffffff;
-	// 	background-color: #f13426;
-	// }
-
-	// td.status span.pending {
-	// 	color: #132d4a;
-	// 	background-color: #ebf0f5;
-	// }
-
-	// #toggleView:checked ~ table thead {
-	// 	display: none;
-	// }
-
-	// #toggleView:checked ~ table tbody {
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-	// 	padding: 4px;
-	// }
-
-	// #toggleView:checked ~ table tbody tr,
-	// #toggleView:checked ~ table tbody td {
-	// 	display: block;
-	// 	border: 0;
-	// }
-
-	// #toggleView:checked ~ table tbody td {
-	// 	padding: 4px;
-	// 	font-weight: bold;
-	// }
-
-	// #toggleView:checked ~ table tbody td:before {
-	// 	content: attr(data-name);
-	// 	width: 100px;
-	// 	display: inline-block;
-	// 	text-transform: capitalize;
-	// 	font-weight: normal;
-	// }
-
-	// #toggleView:checked ~ table tbody td.status {
-	// 	position: absolute;
-	// 	top: 4px;
-	// 	right: 4px;
-	// }
-
-	// #toggleView:checked ~ table tbody tr {
-	// 	position: relative;
-	// 	width: calc(50% - 8px);
-	// 	border: 1px solid #e7e7e7;
-	// 	padding: 8px;
-	// 	margin: 4px;
-	// }
+		@include md-breakpoint {
+			top: 60px;
+			left: 30px;
+			right: unset;
+		}
+	}
 }

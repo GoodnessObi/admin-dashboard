@@ -1,0 +1,29 @@
+@use '../../../styles/variables' as var;
+.form-group {
+	margin-bottom: 20px;
+	width: 100%;
+	label {
+		display: block;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var.$color-primary-alt;
+		margin-bottom: 6px;
+	}
+
+	.form-input {
+		background: #ffffff;
+		border: 1px solid rgba(33, 63, 125, 0.2);
+		border-radius: 8px;
+		height: 40px;
+		padding: 0 20px;
+		width: 100%;
+
+		&::placeholder {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16px;
+			color: rgba(84, 95, 125, 0.7);
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../styles/inputForm.scss';
+import './FilterForm.scss';
 import { InputField } from '../../../../common/UIElements/inputField/InputField';
 
 type FilterFormData = Record<
@@ -9,9 +9,10 @@ type FilterFormData = Record<
 
 interface FilterFormProps {
 	onSubmit: (data: FilterFormData) => void;
+	onReset: () => void;
 }
 
-function FilterForm({ onSubmit }: FilterFormProps) {
+function FilterForm({ onSubmit, onReset }: FilterFormProps) {
 	const formState = {
 		orgName: '',
 		userName: '',
@@ -65,21 +66,23 @@ function FilterForm({ onSubmit }: FilterFormProps) {
 					setForm({ ...form, status: value });
 				}}
 			/>
-			<div className='text-center'>
+			<div className='btn-group'>
 				<button
-					onClick={(e) => {
+					onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 						e.preventDefault();
+						onReset();
 					}}
-					className='reset-btn'
+					className='btn reset'
 				>
 					Reset
 				</button>
 				<button
-					onClick={() => {
+					onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+						e.preventDefault();
 						onSubmit(form);
 						setForm(formState);
 					}}
-					className='filter-btn'
+					className='btn filter'
 				>
 					Filter
 				</button>

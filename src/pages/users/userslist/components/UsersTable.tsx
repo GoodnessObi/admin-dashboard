@@ -4,21 +4,40 @@ import Icons from '../../../../assets/images';
 import { User } from '../../../../types';
 import './UsersTable.scss';
 import DropdownBtn from './Dropdown';
+import FilterForm from './FilterForm';
+import { useState } from 'react';
 
 function UsersTable({ users }: { users: User[] }) {
-	// const navigate = useNavigate();
+	const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 
-	// const goToUser = (e, id) => {
-	// 	e.preventDefault();
-	// 	console.log(id, 'iddd');
-	// 	navigate('/users/2');
-	// }}
+	const toggleForm = () => {
+		setIsFormOpen(!isFormOpen);
+	};
+	const filterUsers = () => {
+		toggleForm();
+	};
+
+	const resetFilter = () => {
+		toggleForm();
+	};
 
 	return (
-		<div className='users__tabBody'>
+		<div className='users__tabBody' onClick={() => setIsFormOpen(false)}>
+			{isFormOpen && (
+				<div className='filterForm'>
+					<FilterForm onSubmit={filterUsers} onReset={resetFilter} />
+				</div>
+			)}
 			<div className='mobile-header'>
 				<p>Users</p>
-				<span role='button'>
+				<span
+					role='button'
+					className='open-filter'
+					onClick={(e) => {
+						e.stopPropagation();
+						toggleForm();
+					}}
+				>
 					<img src={Icons['Filter']} alt='' />
 				</span>
 			</div>
@@ -27,37 +46,79 @@ function UsersTable({ users }: { users: User[] }) {
 					<tr>
 						<th>
 							Organization{' '}
-							<span role='button'>
+							<span
+								role='button'
+								className='open-filter'
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleForm();
+								}}
+							>
 								<img src={Icons['Filter']} alt='' />
 							</span>
 						</th>
 						<th>
 							Username{' '}
-							<span role='button'>
+							<span
+								role='button'
+								className='open-filter'
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleForm();
+								}}
+							>
 								<img src={Icons['Filter']} alt='' />
 							</span>
 						</th>
 						<th>
 							Email{' '}
-							<span role='button'>
+							<span
+								role='button'
+								className='open-filter'
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleForm();
+								}}
+							>
 								<img src={Icons['Filter']} alt='' />
 							</span>
 						</th>
 						<th>
 							Phonenumber{' '}
-							<span role='button'>
+							<span
+								role='button'
+								className='open-filter'
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleForm();
+								}}
+							>
 								<img src={Icons['Filter']} alt='' />
 							</span>
 						</th>
 						<th className='date'>
 							Date joined{' '}
-							<span role='button'>
+							<span
+								role='button'
+								className='open-filter'
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleForm();
+								}}
+							>
 								<img src={Icons['Filter']} alt='' />
 							</span>
 						</th>
 						<th>
 							Status{' '}
-							<span role='button'>
+							<span
+								role='button'
+								className='open-filter'
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleForm();
+								}}
+							>
 								<img src={Icons['Filter']} alt='' />
 							</span>
 						</th>

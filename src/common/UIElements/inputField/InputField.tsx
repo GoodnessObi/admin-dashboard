@@ -14,7 +14,7 @@ export function InputField({
 	type = 'text',
 }: InputFieldProps) {
 	return (
-		<div className='filter-form-group'>
+		<div className='form-group'>
 			<label className='' htmlFor={name}>
 				{name}
 			</label>
