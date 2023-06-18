@@ -1,0 +1,57 @@
+@use '../../../../styles/variables' as var;
+@import '../../../../styles/breakpoints';
+.users {
+	&__header {
+		display: grid;
+		// grid-template-columns: repeat(4, calc(50% - 16px));
+		grid-template-columns: repeat(4, minmax(max-content, calc(50% - 16px)));
+		column-gap: 8px;
+		margin-bottom: 40px;
+		margin-top: 40px;
+		overflow-x: scroll;
+		@include md-breakpoint {
+			column-gap: 26px;
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		&::-webkit-scrollbar {
+			width: 2px;
+			height: 1px;
+		}
+		&::-webkit-scrollbar-track {
+			background: #fff;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: var.$color-primary;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: var.$color-primary;
+		}
+	}
+
+	&__card {
+		background: #ffffff;
+		border: 1px solid rgba(33, 63, 125, 0.06);
+		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+		border-radius: 4px;
+		padding: 30px;
+		padding-top: 20px;
+
+		p {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			text-transform: uppercase;
+			color: var.$color-primary-alt;
+			margin-top: 14px;
+
+			&.count {
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 28px;
+				color: var.$color-primary;
+				margin-top: 12px;
+			}
+		}
+	}
+}

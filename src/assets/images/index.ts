@@ -33,8 +33,20 @@ import Signin from './sign-in.svg';
 import BtnBack from './back-btn.svg';
 import Star from './star.svg';
 import StarOutline from './star-outline.svg';
+import User from './user.svg';
+import ActiveUser from './user-active.svg';
+import LoanUser from './user-loan.svg';
+import SavingsUser from './user-savings.svg';
+import Filter from './filter.svg';
+import More from './more.svg';
 
 const Icons: { [key: string]: string } = {
+	Filter,
+	More,
+	User,
+	ActiveUser,
+	LoanUser,
+	SavingsUser,
 	Star,
 	StarOutline,
 	BtnBack,
