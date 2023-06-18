@@ -20,7 +20,7 @@
 		text-transform: uppercase;
 		color: #545f7d;
 		text-align: left;
-		margin-bottom: 15px;
+		margin-bottom: 8px;
 		background: #ffffff;
 		border: 1px solid rgba(33, 63, 125, 0.06);
 		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -82,8 +82,8 @@
 	tbody {
 		display: grid;
 		grid-template-columns: 1fr;
-		column-gap: 20px;
-		row-gap: 20px;
+		column-gap: 16px;
+		row-gap: 16px;
 
 		@include sm-breakpoint {
 			grid-template-columns: repeat(2, 1fr);
