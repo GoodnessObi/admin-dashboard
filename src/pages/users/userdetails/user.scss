@@ -8,6 +8,54 @@
 		grid-template-rows: auto;
 		grid-row-gap: 20px;
 	}
+
+	&__nav {
+		width: 100%;
+		overflow-x: scroll;
+
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.nav {
+			display: flex;
+			flex-wrap: nowrap;
+			list-style-type: none;
+			padding: 0 16px;
+			margin: 0;
+
+			@include sm-breakpoint {
+				padding: 0 36px;
+			}
+
+			&-link {
+				display: inline-block;
+				text-decoration: none;
+				white-space: nowrap;
+				text-transform: capitalize;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+				text-align: center;
+				color: rgba(0, 0, 0, 0.8);
+				padding: 0 16px 10px 16px;
+
+				&:hover,
+				&.active {
+					color: var.$color-secondary;
+					border-bottom: 1px solid var.$color-secondary;
+				}
+
+				@include sm-breakpoint {
+					padding: 0 24px 10px 24px;
+				}
+			}
+		}
+	}
+
 	&__tabHeader,
 	&__tabBody {
 		background-color: #fff;
@@ -15,13 +63,27 @@
 		border: 1px solid rgba(33, 63, 125, 0.06);
 		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 		border-radius: 4px;
+		width: 100%;
 	}
 
 	&__tabHeader {
+		padding: 0;
+		overflow-x: scroll;
+
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
 		&-details {
+			width: 100%;
 			display: flex;
 			position: relative;
 			flex-direction: column;
+			padding: 30px;
+			padding-bottom: 50px;
 
 			@include sm-breakpoint {
 				flex-direction: row;
@@ -47,10 +109,10 @@
 
 				&-tier {
 					position: absolute;
-					right: 10px;
+					right: 30px;
 
 					@include sm-breakpoint {
-						position: relative;
+						position: unset;
 						display: flex;
 						flex-direction: column;
 						align-items: center;

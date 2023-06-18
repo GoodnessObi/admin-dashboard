@@ -53,7 +53,45 @@ function User() {
 							<p className='p-light'>{user.accountNumber}/Providus Bank</p>
 						</div>
 					</div>
-					<div className='tabs'></div>
+
+					<div className='user__nav'>
+						<ul className='nav'>
+							<li className='nav-item'>
+								<Link className='nav-link active' aria-current='page' to='#'>
+									general information
+								</Link>
+							</li>
+							<li className='nav-item'>
+								<Link className='nav-link' aria-current='page' to='#'>
+									documents
+								</Link>
+							</li>
+
+							<li className='nav-item'>
+								<Link className='nav-link' aria-current='page' to='#'>
+									bank details
+								</Link>
+							</li>
+
+							<li className='nav-item'>
+								<Link className='nav-link' aria-current='page' to='#'>
+									loans
+								</Link>
+							</li>
+
+							<li className='nav-item'>
+								<Link className='nav-link' aria-current='page' to='#'>
+									savings
+								</Link>
+							</li>
+
+							<li className='nav-item'>
+								<Link className='nav-link' aria-current='page' to='#'>
+									app and system
+								</Link>
+							</li>
+						</ul>
+					</div>
 				</div>
 
 				<div className='user__tabBody'>
