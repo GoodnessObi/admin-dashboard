@@ -39,8 +39,14 @@ import LoanUser from './user-loan.svg';
 import SavingsUser from './user-savings.svg';
 import Filter from './filter.svg';
 import More from './more.svg';
+import Delete from './delete.svg';
+import Blacklist from './blacklist.svg';
+import View from './view.svg';
 
 const Icons: { [key: string]: string } = {
+	Delete,
+	Blacklist,
+	View,
 	Filter,
 	More,
 	User,

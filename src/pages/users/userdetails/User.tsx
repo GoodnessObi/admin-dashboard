@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import useUser from '../../../common/hooks/useUser';
-import './user.scss';
+import './User.scss';
 import Icons from '../../../assets/images';
 
 function User() {

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Icons from '../../../../assets/images';
 import { User } from '../../../../types';
 import './UsersTable.scss';
+import DropdownBtn from './Dropdown';
 
 function UsersTable({ users }: { users: User[] }) {
 	// const navigate = useNavigate();
@@ -82,9 +83,7 @@ function UsersTable({ users }: { users: User[] }) {
 								<span className='status-span'>Active</span>
 							</td>
 							<td data-name='action' className='action'>
-								<span>
-									<img src={Icons['More']} alt='' />
-								</span>
+								<DropdownBtn id={user.id} />
 							</td>
 						</tr>
 					))}
