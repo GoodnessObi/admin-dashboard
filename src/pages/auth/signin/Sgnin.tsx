@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import Icons from '../../../assets/images';
-import './signin.scss';
+import './Signin.scss';
 
 function Signin() {
 	const navigate = useNavigate();

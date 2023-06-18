@@ -1,7 +1,7 @@
 import useUsers from '../../../common/hooks/useUsers';
 import UsersTable from './components/UsersTable';
 import UsersHeader from './components/UsersHeader';
-import './users.scss';
+import './Users.scss';
 
 function Users() {
 	const [users] = useUsers();
