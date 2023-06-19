@@ -49,6 +49,11 @@ picture {
 	display: block;
 }
 
+button,
+[role='button'] {
+	cursor: pointer;
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
