@@ -8,6 +8,7 @@ export default function useUsers(): [users: User[], status: Status] {
 	const userStatus: string[] = ['active', 'inactive', 'blacklisted', 'pending'];
 
 	useEffect(() => {
+		localStorage.removeItem('users');
 		async function fetchUsers() {
 			setStatus('loading');
 			const res = await fetch(

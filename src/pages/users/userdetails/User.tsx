@@ -18,8 +18,14 @@ function User() {
 			<div className='page__header'>
 				<h2>User Details</h2>
 				<div className='page__header-actions'>
-					<button className='blacklist'>blacklist user</button>
-					<button className='activate'>activate user</button>
+					{user.status !== 'blacklisted' && (
+						<button className='blacklist'>blacklist user</button>
+					)}
+					{user.status !== 'active' ? (
+						<button className='activate'>activate user</button>
+					) : (
+						<button className='blacklist'>deactivate user</button>
+					)}
 				</div>
 			</div>
 

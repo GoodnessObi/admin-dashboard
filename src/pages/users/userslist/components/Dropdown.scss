@@ -43,5 +43,10 @@
 		img {
 			margin-right: 8px;
 		}
+
+		&.disable {
+			cursor: not-allowed;
+			opacity: 0.1;
+		}
 	}
 }

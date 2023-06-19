@@ -10,6 +10,7 @@ export default function useUser(id: string): [user: User, status: Status] {
 		if (users !== null) {
 			const json = JSON.parse(users).find((user: User) => user.id === id);
 			setUser(json);
+			setStatus('loaded');
 		} else {
 			fetchUser();
 		}
@@ -20,7 +21,6 @@ export default function useUser(id: string): [user: User, status: Status] {
 				`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`
 			);
 			const json = await res.json();
-			localStorage.setItem('users', JSON.stringify(json));
 			setUser(json);
 			setStatus('loaded');
 		}
