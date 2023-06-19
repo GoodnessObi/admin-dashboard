@@ -9,7 +9,7 @@ const DropdownBtn = ({
 	status,
 }: {
 	id: string | undefined;
-	status: string;
+	status: string | undefined;
 }) => {
 	const items: MenuProps['items'] = [
 		{

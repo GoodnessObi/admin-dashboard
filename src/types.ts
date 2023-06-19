@@ -57,7 +57,7 @@ export type User = {
 	email?: string;
 	phoneNumber?: string;
 	lastActiveDate?: string;
-	status: string;
+	status?: string;
 	profile?: {
 		firstName: string;
 		lastName: string;

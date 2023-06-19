@@ -4,6 +4,7 @@ import { User, Status } from '../../types';
 export default function useUser(id: string): [user: User, status: Status] {
 	const [user, setUser] = useState<User>({});
 	const [status, setStatus] = useState<Status>('unloaded');
+	const userStatus: string[] = ['active', 'inactive', 'blacklisted', 'pending'];
 
 	useEffect(() => {
 		const users = localStorage.getItem('users');
@@ -21,6 +22,8 @@ export default function useUser(id: string): [user: User, status: Status] {
 				`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`
 			);
 			const json = await res.json();
+			json.status =
+				userStatus[Math.floor(Math.random() * (userStatus.length - 0) + 0)];
 			setUser(json);
 			setStatus('loaded');
 		}
