@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom';
 import './Dropdown.scss';
 import Icons from '../../../../assets/images';
 
-const DropdownBtn = ({ id }: { id: string | undefined }) => {
+const DropdownBtn = ({
+	id,
+	status,
+}: {
+	id: string | undefined;
+	status: string | undefined;
+}) => {
 	const items: MenuProps['items'] = [
 		{
 			key: '1',
@@ -21,7 +27,10 @@ const DropdownBtn = ({ id }: { id: string | undefined }) => {
 		{
 			key: '2',
 			label: (
-				<span role='button' className='dropdown-item'>
+				<span
+					role='button'
+					className={`dropdown-item ${status === 'blacklisted' && 'disable'}`}
+				>
 					<img src={Icons['Delete']} alt='' /> Blacklist User
 				</span>
 			),
@@ -30,7 +39,8 @@ const DropdownBtn = ({ id }: { id: string | undefined }) => {
 			key: '3',
 			label: (
 				<span role='button' className='dropdown-item'>
-					<img src={Icons['Blacklist']} alt='' /> Activate User
+					<img src={Icons['Blacklist']} alt='' />{' '}
+					{status === 'active' ? 'Deactivate User' : 'Activate User'}
 				</span>
 			),
 		},

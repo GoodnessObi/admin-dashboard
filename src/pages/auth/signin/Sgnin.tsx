@@ -42,6 +42,7 @@ function Signin() {
 								name='password'
 								placeholder='password'
 								className='form__input'
+								autoComplete='true'
 							/>
 							<span role='button' className='show-password'>
 								SHOW
