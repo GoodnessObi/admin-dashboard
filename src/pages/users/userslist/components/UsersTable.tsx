@@ -141,7 +141,9 @@ function UsersTable({ users }: { users: User[] }) {
 								2009/02/27
 							</td>
 							<td className='status'>
-								<span className='status-span'>Active</span>
+								<span className={`status-span ${user.status}`}>
+									{user.status}
+								</span>
 							</td>
 							<td data-name='action' className='action'>
 								<DropdownBtn id={user.id} />

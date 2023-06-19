@@ -170,9 +170,33 @@
 
 			.status-span {
 				padding: 6px 18px;
-				background: rgba(228, 3, 59, 0.1);
 				border-radius: 100px;
 				word-break: keep-all;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16px;
+				text-align: center;
+				text-transform: capitalize;
+
+				&.active {
+					background: rgb(57, 205, 98, 0.06);
+					color: #39cd62;
+				}
+
+				&.inactive {
+					background: rgba(84, 95, 125, 0.06);
+					color: #545f7d;
+				}
+
+				&.blacklisted {
+					background: rgb(228, 3, 59, 0.1);
+					color: #e4033b;
+				}
+
+				&.pending {
+					background: rgb(233, 178, 0, 0.1);
+					color: #e9b200;
+				}
 
 				&.mobile {
 					margin-left: 20px;
