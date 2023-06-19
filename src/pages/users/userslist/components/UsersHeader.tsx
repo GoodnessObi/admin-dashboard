@@ -3,6 +3,8 @@ import { User } from '../../../../types';
 import './UsersHeader.scss';
 
 function UsersHeader({ users }: { users: User[] }) {
+	const activeUsers = users.filter((user: User) => user.status === 'active');
+
 	return (
 		<div className='users__header'>
 			<div className='users__card'>
@@ -13,7 +15,7 @@ function UsersHeader({ users }: { users: User[] }) {
 			<div className='users__card'>
 				<img src={Icons['ActiveUser']} alt='' />
 				<p>active users</p>
-				<p className='count'>{users.length}</p>
+				<p className='count'>{activeUsers.length}</p>
 			</div>
 			<div className='users__card'>
 				<img src={Icons['LoanUser']} alt='' />

@@ -6,9 +6,14 @@ import './UsersTable.scss';
 import DropdownBtn from './Dropdown';
 import FilterForm from './FilterForm';
 import { useState } from 'react';
+import moment from 'moment';
 
 function UsersTable({ users }: { users: User[] }) {
 	const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
+
+	const formatDate = (date: string) => {
+		return moment(date).format('MMM DD YYYY, h:mm a');
+	};
 
 	const toggleForm = () => {
 		setIsFormOpen(!isFormOpen);
@@ -136,9 +141,14 @@ function UsersTable({ users }: { users: User[] }) {
 								<span className='status-span mobile'>Active</span>
 							</td>
 							<td data-name='email'>{user.email}</td>
-							<td data-name='phoneumber'>03489488348934</td>
+							<td data-name='phoneumber'>
+								{user.profile?.phoneNumber.slice(
+									0,
+									user.profile?.phoneNumber.indexOf('x')
+								)}
+							</td>
 							<td data-name='date joined' className='date'>
-								2009/02/27
+								{user.createdAt && formatDate(user.createdAt)}
 							</td>
 							<td className='status'>
 								<span className={`status-span ${user.status}`}>

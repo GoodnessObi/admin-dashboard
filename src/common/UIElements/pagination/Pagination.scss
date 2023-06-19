@@ -54,6 +54,7 @@
 			line-height: 19px;
 			color: rgba(84, 95, 125, 0.6);
 			margin-left: 20px;
+			cursor: pointer;
 
 			&.next,
 			&.prev {
@@ -66,6 +67,11 @@
 				padding: 6px;
 				width: 24px;
 				height: 24px;
+			}
+
+			&:hover,
+			&.active {
+				color: #545f7d;
 			}
 		}
 	}

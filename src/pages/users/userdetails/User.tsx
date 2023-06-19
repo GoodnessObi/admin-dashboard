@@ -114,7 +114,12 @@ function User() {
 
 							<div>
 								<p className='p-heading'>phone number</p>
-								<p>{user.profile?.phoneNumber}</p>
+								<p>
+									{user.profile?.phoneNumber.slice(
+										0,
+										user.profile?.phoneNumber.indexOf('x')
+									)}
+								</p>
 							</div>
 
 							<div>
@@ -228,7 +233,12 @@ function User() {
 
 							<div>
 								<p className='p-heading'>phone number</p>
-								<p>{user.guarantor?.phoneNumber}</p>
+								<p>
+									{user.guarantor?.phoneNumber.slice(
+										0,
+										user.guarantor?.phoneNumber.indexOf('x')
+									)}
+								</p>
 							</div>
 
 							<div>
