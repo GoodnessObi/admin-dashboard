@@ -33,6 +33,7 @@ View Deployed Page Here. Lendsqr
  * **eslint** for linting
  * **vite** as our bundler
  * **vitest** for testing
+ * **vitest-fetch-mock**
  * **happy-dom** used by vutest to create a browser-like environment 
  * **@testing-library/react** that has a bunch of convenience features that make testing React significantly easier
 
