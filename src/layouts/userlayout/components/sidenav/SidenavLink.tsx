@@ -9,7 +9,7 @@ type SidenavLinkProps = {
 
 export default function SidenavLink({ link }: SidenavLinkProps) {
 	return (
-		<NavLink to={link.link} className='navlink'>
+		<NavLink to={link.link} className='navlink' data-testid='navlink'>
 			<img src={Icons[link.icon]} alt='' />
 			{link.label}
 		</NavLink>

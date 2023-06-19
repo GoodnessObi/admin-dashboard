@@ -11,7 +11,7 @@ export default function SideNav({ navIsOpen }: { navIsOpen: boolean }) {
 	const navigate = useNavigate();
 
 	return (
-		<nav className={`sidenav ${navIsOpen ? 'open' : ''}`}>
+		<nav className={`sidenav ${navIsOpen ? 'open' : ''}`} data-testid='sidenav'>
 			<div className='sidenav__container'>
 				<div className='sidenav__top'>
 					<span role='button' className='sidenav__item'>

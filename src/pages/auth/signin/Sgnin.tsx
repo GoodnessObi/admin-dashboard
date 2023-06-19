@@ -55,6 +55,7 @@ function Signin() {
 
 						<button
 							className='form__button'
+							type='submit'
 							onClick={(e) => {
 								e.preventDefault();
 								navigate('/users');

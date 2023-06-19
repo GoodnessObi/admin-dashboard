@@ -12,6 +12,7 @@ const config: ViteConfig = {
 	// root: 'src',
 	test: {
 		environment: 'happy-dom',
+		setupFiles: ['./setupVitest.js'],
 	},
 	resolve: {
 		alias: [

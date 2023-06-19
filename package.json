@@ -8,7 +8,8 @@
 		"build": "tsc && vite build",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
-		"test": "vitest"
+		"test": "vitest",
+		"test:coverage": "vitest --coverage"
 	},
 	"dependencies": {
 		"antd": "^5.5.0",
@@ -33,6 +34,7 @@
 		"happy-dom": "^7.6.0",
 		"typescript": "^5.0.2",
 		"vite": "^4.3.9",
-		"vitest": "^0.24.3"
+		"vitest": "^0.24.3",
+		"vitest-fetch-mock": "^0.2.1"
 	}
 }
