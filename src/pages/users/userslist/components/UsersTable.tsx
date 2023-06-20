@@ -138,7 +138,9 @@ function UsersTable({ users }: { users: User[] }) {
 								<Link to={`/users/${user.id}`}>
 									{user.profile?.firstName} {user.profile?.lastName}
 								</Link>
-								<span className='status-span mobile'>Active</span>
+								<span className={`status-span mobile ${user.status}`}>
+									{user.status}
+								</span>
 							</td>
 							<td data-name='email'>{user.email}</td>
 							<td data-name='phoneumber'>

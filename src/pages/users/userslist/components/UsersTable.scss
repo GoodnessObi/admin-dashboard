@@ -199,7 +199,9 @@
 				}
 
 				&.mobile {
+					display: inline-block;
 					margin-left: 20px;
+					text-transform: capitalize;
 					@include md-breakpoint {
 						display: none;
 					}
